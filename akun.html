@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>firli.aja | Akun Saya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">firli<span>.aja</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Beranda</a>
+                <a href="premium.html">Premium</a>
+                <a href="topup.html">Top Up</a>
+                <a href="akun.html" class="active">Akun</a>
+            </div>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-user"></i>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Akun Saya</h1>
+            <p>Login atau daftar untuk mengakses fitur lengkap</p>
+        </div>
+    </section>
+
+    <section class="account-section">
+        <div class="container">
+            <div class="account-card">
+                <div class="account-tabs">
+                    <button class="tab-btn active" onclick="showLogin()">Login</button>
+                    <button class="tab-btn" onclick="showRegister()">Daftar</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm" class="account-form active">
+                    <h3>Login ke Akun Anda</h3>
+                    <input type="email" id="loginEmail" placeholder="Email" class="review-input">
+                    <input type="password" id="loginPassword" placeholder="Password" class="review-input">
+                    <button class="btn-primary" onclick="loginUser()">Login</button>
+                    <p class="demo-hint">Demo: gunakan email dan password apapun untuk mencoba</p>
+                </div>
+                
+                <!-- Register Form -->
+                <div id="registerForm" class="account-form">
+                    <h3>Daftar Akun Baru</h3>
+                    <input type="text" id="regName" placeholder="Nama Lengkap" class="review-input">
+                    <input type="email" id="regEmail" placeholder="Email" class="review-input">
+                    <input type="password" id="regPassword" placeholder="Password" class="review-input">
+                    <button class="btn-primary" onclick="registerUser()">Daftar</button>
+                </div>
+                
+                <!-- User Info (after login) -->
+                <div id="userInfo" class="user-info" style="display: none;">
+                    <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+                    <h3 id="userNameDisplay"></h3>
+                    <p id="userEmailDisplay"></p>
+                    <div class="user-balance">
+                        <h4>Saldo</h4>
+                        <div class="balance-amount">Rp <span id="userBalanceInfo">0</span></div>
+                    </div>
+                    <button class="btn-outline" onclick="logoutUser()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col"><h4>firli.aja</h4><p>Premium store terpercaya</p></div>
+                <div class="footer-col"><h4>Kontak</h4><p><i class="fab fa-whatsapp"></i> +62 821-4304-1255</p></div>
+                <div class="footer-col"><h4>Pembayaran</h4><p>Dana, Gopay, OVO, BRI, BNI</p></div>
+            </div>
+            <div class="copyright">&copy; 2025 firli.aja Premium Store</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
