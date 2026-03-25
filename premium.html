@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Daftar lengkap produk premium firli.aja - CapCut Pro, Canva Pro, Spotify, Netflix, Alight Motion, YouTube Premium">
+    <title>firli.aja | Semua Produk Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">firli<span>.aja</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Beranda</a>
+                <a href="premium.html" class="active">Premium</a>
+                <a href="topup.html">Top Up</a>
+                <a href="akun.html">Akun</a>
+            </div>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-user"></i>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Semua Produk Premium</h1>
+            <p>Pilih produk premium favorit Anda dengan harga terbaik</p>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="video">Video Editor</button>
+                <button class="filter-btn" data-filter="music">Music</button>
+                <button class="filter-btn" data-filter="streaming">Streaming</button>
+            </div>
+            <div class="product-grid" id="allProductGrid"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>firli.aja</h4>
+                    <p>Platform jual akun premium termurah dan terpercaya.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <p><i class="fab fa-whatsapp"></i> +62 821-4304-1255</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Metode Pembayaran</h4>
+                    <p>Dana, Gopay, OVO, Shopeepay, BRI, BNI</p>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 firli.aja Premium Store</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePaymentModal()">&times;</span>
+            <h3>Detail Pembayaran</h3>
+            <p>Produk: <strong id="modalProductName"></strong></p>
+            <div class="payment-methods">
+                <div class="payment-method">Dana: 082143041255 (Firlian Agna Syahrial)</div>
+                <div class="payment-method">Gopay: 082143041255 (Rohmawati Romadona)</div>
+                <div class="payment-method">OVO: 082143041255 (Firlian Agna Syahrial)</div>
+                <div class="payment-method">BRI: 017701025350530 (Firlian Agna Syahrial)</div>
+                <div class="payment-method">BNI: 1909356562 (Firlian Agna Syahrial)</div>
+            </div>
+            <button class="btn-primary" onclick="confirmPayment()">Saya Sudah Bayar</button>
+        </div>
+    </div>
+
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
