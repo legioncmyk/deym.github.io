@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="firli.aja - Platform jual akun premium termurah dan terpercaya. CapCut Pro, Canva Pro, Spotify, Netflix, dan lainnya. Proses cepat 1-5 menit.">
+    <meta name="keywords" content="akun premium, capcut pro, canva pro, spotify premium, netflix, alight motion, youtube premium, firli.aja">
+    <meta name="author" content="firli.aja">
+    <meta property="og:title" content="firli.aja | Premium Store - Akun Premium Murah & Cepat">
+    <meta property="og:description" content="Jual akun premium CapCut Pro, Canva Pro, Spotify, dan lainnya. Proses cepat, garansi replace, harga termurah.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="firli.aja">
+    <title>firli.aja | Premium Store - Akun Premium Murah & Cepat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "firli.aja",
+        "description": "Platform jual akun premium termurah dan terpercaya",
+        "url": "https://firli.aja.com"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">firli<span>.aja</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Beranda</a>
+                <a href="premium.html">Premium</a>
+                <a href="topup.html">Top Up</a>
+                <a href="akun.html">Akun</a>
+            </div>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart" id="cartIcon"></i>
+                <i class="fas fa-user" id="userIcon"></i>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">✨ PREMIUM STORE TERPERCAYA</div>
+                    <h1>FIRLI.AJA <span class="highlight">PREMIUM</span> STORE 🔥</h1>
+                    <h2>Akses Premium Murah & Cepat</h2>
+                    <p class="hero-desc">Proses 1–5 Menit • Garansi Replace • Support 24/7</p>
+                    <div class="btn-group">
+                        <button class="btn-primary" onclick="scrollToProducts()">Beli Sekarang</button>
+                        <a href="premium.html" class="btn-outline">Lihat Produk</a>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="trust-item"><i class="fas fa-star"></i> ⭐ 4.9 Rating</div>
+                        <div class="trust-item"><i class="fas fa-users"></i> 👥 500+ User</div>
+                        <div class="trust-item"><i class="fas fa-lock"></i> 🔒 Aman</div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/id/104/500/400" alt="Premium Store Hero">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Populer -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">🔥 Produk Populer</h2>
+            <div class="product-grid" id="homeProductGrid"></div>
+        </div>
+    </section>
+
+    <!-- Trust Section 4 Card -->
+    <section class="trust-section-full">
+        <div class="container">
+            <div class="trust-cards">
+                <div class="trust-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Aman & Terpercaya</h4>
+                    <p>100% akun original & legal</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h4>Garansi Replace</h4>
+                    <p>Jika masalah, diganti baru</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Proses Cepat</h4>
+                    <p>1-5 menit setelah bayar</p>
+                </div>
+                <div class="trust-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>Support Aktif</h4>
+                    <p>Respon cepat 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency-section">
+        <div class="container">
+            <div class="urgency-content">
+                <div class="urgency-left">
+                    <h3>🔥 Promo Hari Ini 🔥</h3>
+                    <p>Diskon tambahan 10% semua produk premium!</p>
+                    <div class="stock-badge">📦 Sisa akun: <span id="stockCount">3</span></div>
+                </div>
+                <div class="urgency-right">
+                    <div class="timer" id="countdownTimer">23:59:59</div>
+                    <p>Berakhir dalam</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni + Review System -->
+    <section class="testimoni-section">
+        <div class="container">
+            <h2 class="section-title">💬 Testimoni Pelanggan</h2>
+            <div class="review-stats">
+                <div class="avg-rating">
+                    <span class="avg-score" id="avgRating">0.0</span>
+                    <div class="stars" id="avgStars">☆☆☆☆☆</div>
+                    <span id="totalReviews">0</span> ulasan
+                </div>
+            </div>
+            <div class="testimoni-grid" id="testimoniGrid"></div>
+            
+            <!-- Form Review -->
+            <div class="review-form">
+                <h3>Berikan Ulasan</h3>
+                <input type="text" id="reviewName" placeholder="Nama Anda" class="review-input">
+                <div class="rating-input">
+                    <span>Rating: </span>
+                    <div class="star-rating" id="starRating">
+                        <i class="far fa-star" data-value="1"></i>
+                        <i class="far fa-star" data-value="2"></i>
+                        <i class="far fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                </div>
+                <textarea id="reviewComment" placeholder="Tulis komentar Anda..." rows="3" class="review-input"></textarea>
+                <button class="btn-primary" onclick="submitReview()">Kirim Ulasan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Siap Upgrade ke Premium?</h2>
+            <p>Dapatkan akses unlimited ke semua produk premium dengan harga termurah!</p>
+            <a href="premium.html" class="btn-primary btn-large">Beli Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>firli.aja</h4>
+                    <p>Platform jual akun premium termurah dan terpercaya sejak 2024.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <p><i class="fab fa-whatsapp"></i> +62 821-4304-1255</p>
+                    <p><i class="far fa-envelope"></i> support@firli.aja</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Metode Pembayaran</h4>
+                    <div class="payment-icons">
+                        <i class="fas fa-wallet"></i> Dana
+                        <i class="fas fa-credit-card"></i> Gopay
+                        <i class="fas fa-university"></i> Bank BRI/BNI
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 firli.aja Premium Store. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closePaymentModal()">&times;</span>
+            <h3>Detail Pembayaran</h3>
+            <p>Produk: <strong id="modalProductName"></strong></p>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <i class="fas fa-wallet"></i> Dana
+                    <span class="copy-number" onclick="copyNumber('082143041255')">082143041255</span>
+                    <small>a.n Firlian Agna Syahrial</small>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-credit-card"></i> Gopay
+                    <span class="copy-number" onclick="copyNumber('082143041255')">082143041255</span>
+                    <small>a.n Rohmawati Romadona</small>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-store"></i> Shopeepay
+                    <span class="copy-number" onclick="copyNumber('082143041255')">082143041255</span>
+                    <small>a.n Firlian Agna Syahrial</small>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-mobile-alt"></i> OVO
+                    <span class="copy-number" onclick="copyNumber('082143041255')">082143041255</span>
+                    <small>a.n Firlian Agna Syahrial</small>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-university"></i> Bank BRI
+                    <span class="copy-number" onclick="copyNumber('017701025350530')">017701025350530</span>
+                    <small>a.n Firlian Agna Syahrial</small>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-university"></i> Bank BNI
+                    <span class="copy-number" onclick="copyNumber('1909356562')">1909356562</span>
+                    <small>a.n Firlian Agna Syahrial</small>
+                </div>
+            </div>
+            <button class="btn-primary" id="confirmPaymentBtn" onclick="confirmPayment()">Saya Sudah Bayar</button>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
