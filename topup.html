@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>firli.aja | Top Up Saldo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">firli<span>.aja</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Beranda</a>
+                <a href="premium.html">Premium</a>
+                <a href="topup.html" class="active">Top Up</a>
+                <a href="akun.html">Akun</a>
+            </div>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-user"></i>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Top Up Saldo</h1>
+            <p>Isi saldo Anda untuk pembelian yang lebih cepat</p>
+        </div>
+    </section>
+
+    <section class="topup-section">
+        <div class="container">
+            <div class="topup-card">
+                <div class="topup-balance">
+                    <h3>Saldo Anda</h3>
+                    <div class="balance-amount">Rp <span id="userBalance">0</span></div>
+                </div>
+                <div class="topup-nominal">
+                    <h3>Pilih Nominal Top Up</h3>
+                    <div class="nominal-grid">
+                        <div class="nominal-item" data-nominal="10000">Rp 10.000</div>
+                        <div class="nominal-item" data-nominal="25000">Rp 25.000</div>
+                        <div class="nominal-item" data-nominal="50000">Rp 50.000</div>
+                        <div class="nominal-item" data-nominal="100000">Rp 100.000</div>
+                        <div class="nominal-item" data-nominal="250000">Rp 250.000</div>
+                        <div class="nominal-item" data-nominal="500000">Rp 500.000</div>
+                    </div>
+                </div>
+                <div class="topup-custom">
+                    <h3>Atau Input Nominal Lain</h3>
+                    <input type="number" id="customNominal" placeholder="Masukkan nominal (min Rp 10.000)" class="review-input">
+                </div>
+                <button class="btn-primary btn-large" onclick="processTopup()">Top Up Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col"><h4>firli.aja</h4><p>Premium store terpercaya</p></div>
+                <div class="footer-col"><h4>Kontak</h4><p><i class="fab fa-whatsapp"></i> +62 821-4304-1255</p></div>
+                <div class="footer-col"><h4>Pembayaran</h4><p>Dana, Gopay, OVO, BRI, BNI</p></div>
+            </div>
+            <div class="copyright">&copy; 2025 firli.aja Premium Store</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="topupModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeTopupModal()">&times;</span>
+            <h3>Detail Pembayaran Top Up</h3>
+            <p>Nominal: <strong id="topupNominal"></strong></p>
+            <div class="payment-methods">
+                <div class="payment-method">Dana: 082143041255 (Firlian Agna Syahrial)</div>
+                <div class="payment-method">Gopay: 082143041255 (Rohmawati Romadona)</div>
+                <div class="payment-method">BRI: 017701025350530 (Firlian Agna Syahrial)</div>
+            </div>
+            <button class="btn-primary" onclick="confirmTopup()">Konfirmasi Pembayaran</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
